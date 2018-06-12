@@ -7,6 +7,8 @@ import projectShareBox from '../c/project-share-box';
 import projectRow from '../c/project-row';
 import userVM from '../vms/user-vm';
 
+const { CatarseAnalytics } = window;
+
 const I18nScope = _.partial(h.i18nScope, 'projects.contributions');
 
 const thankYou = {

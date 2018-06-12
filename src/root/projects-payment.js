@@ -14,6 +14,8 @@ import paymentForm from '../c/payment-form';
 import inlineError from '../c/inline-error';
 import addressForm from '../c/address-form';
 
+const { CatarseAnalytics } = window;
+
 const I18nScope = _.partial(h.i18nScope, 'projects.contributions.edit');
 const I18nIntScope = _.partial(h.i18nScope, 'projects.contributions.edit_international');
 

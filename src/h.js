@@ -4,9 +4,9 @@ import moment from 'moment';
 import $ from 'jquery';
 import m from 'mithril';
 import {catarse} from './api';
-import CatarseAnalytics from 'CatarseAnalytics';
 import contributionVM from './vms/contribution-vm';
 
+const { CatarseAnalytics } = window;
 const
     _dataCache = {},
     hashMatch = (str) => window.location.hash === str,
