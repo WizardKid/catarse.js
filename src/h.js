@@ -1,4 +1,3 @@
-import I18n from 'i18n-js';
 import _ from 'underscore';
 import moment from 'moment';
 import $ from 'jquery';
@@ -368,7 +367,7 @@ const
         m('img[alt="Loader"][src="https://s3.amazonaws.com/catarse.files/loader.gif"]')
     ]),
 
-    newFeatureBadge = () => m('span.badge.badge-success.margin-side-5', I18n.t('projects.new_feature_badge')),
+    newFeatureBadge = () => m('span.badge.badge-success.margin-side-5', window.I18n.t('projects.new_feature_badge')),
 
     fbParse = () => {
         const tryParse = () => {

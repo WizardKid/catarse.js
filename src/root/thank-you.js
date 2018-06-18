@@ -1,6 +1,5 @@
 import m from 'mithril';
 import _ from 'underscore';
-import I18n from 'i18n-js';
 import h from '../h';
 import facebookButton from '../c/facebook-button';
 import projectShareBox from '../c/project-share-box';
@@ -59,11 +58,11 @@ const thankYou = {
                           m('#thank-you.u-text-center', !ctrl.isSlip ?
                           [
                               m('#creditcard-thank-you.fontsize-larger.text-success.u-marginbottom-20',
-                                I18n.t('thank_you.thank_you', I18nScope())
+                                window.I18n.t('thank_you.thank_you', I18nScope())
                                ),
                               m('.fontsize-base.u-marginbottom-40',
                                 m.trust(
-                                    I18n.t('thank_you.thank_you_text_html',
+                                    window.I18n.t('thank_you.thank_you_text_html',
                                            I18nScope({
                                                total: args.contribution.project.total_contributions,
                                                email: args.contribution.contribution_email,
@@ -77,9 +76,9 @@ const thankYou = {
                                 'Compartilhe com seus amigos e ajude esse projeto a bater a meta!'
                                )
                           ] : [
-                              m('#slip-thank-you.fontsize-largest.text-success.u-marginbottom-20', I18n.t('thank_you_slip.thank_you', I18nScope())),
+                              m('#slip-thank-you.fontsize-largest.text-success.u-marginbottom-20', window.I18n.t('thank_you_slip.thank_you', I18nScope())),
                               m('.fontsize-base.u-marginbottom-40',
-                                m.trust(I18n.t('thank_you_slip.thank_you_text_html',
+                                m.trust(window.I18n.t('thank_you_slip.thank_you_text_html',
                                                I18nScope({
                                                    email: args.contribution.contribution_email,
                                                    link_email: `/pt/users/${h.getUser().user_id}/edit#about_me`
@@ -139,7 +138,7 @@ const thankYou = {
                                  )
                                ) : [
                                    m('.fontsize-large.fontweight-semibold.u-marginbottom-30.u-text-center',
-                                     I18n.t('thank_you.project_recommendations', I18nScope())
+                                     window.I18n.t('thank_you.project_recommendations', I18nScope())
                                     ),
                                    m.component(projectRow, {
                                        collection: ctrl.recommendedProjects,
