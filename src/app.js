@@ -1,5 +1,6 @@
-import c from './c';
+import m from 'mithril';
 import Chart from 'chart.js';
+import c from './c';
 
 (function () {
     Chart.defaults.global.responsive = true;
